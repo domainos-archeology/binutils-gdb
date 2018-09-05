@@ -59,3 +59,6 @@ stamp-*
 /mpc*
 /gmp*
 /isl*
+
+Makefile
+*.dSYM
