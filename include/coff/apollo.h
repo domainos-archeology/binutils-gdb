@@ -123,3 +123,12 @@ struct external_reloc
 #define STYP_COMPRESSED		0x20000000	/* No section data per se (s_scnptr = 0), but there are
 						   initialization directives for it in .rwdi section
 						   (used in conjunction with STYP_BSS) */
+
+/* Apollo specific storage classes */
+#define  C_EXT_UNMARKED  110  /* like C_EXT but indicates symbol definition is unmarked */
+#define  C_EXT_EXPUNGED  111  /* like C_EXT but indicates symbol definition is expunged */
+#define  C_PACKAGE       112  /* the package name associated with all subsequent C_EXT  */
+                              /* symbols, until another or a C_NIL_PACKAGE entry is encountered */
+#define  C_NIL_PACKAGE   113  /* Indicates that no package name is associated with subsequent C_EXT */
+                              /* symbols, until a C_PACKAGE entry is encountered */
+

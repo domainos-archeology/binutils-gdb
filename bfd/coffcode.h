@@ -4564,6 +4564,10 @@ coff_slurp_symbol_table (bfd * abfd)
 	    case C_THUMBEXT:
 	    case C_THUMBEXTFUNC:
 #endif
+#ifdef APOLLO_M68
+            case C_EXT_UNMARKED:
+            case C_EXT_EXPUNGED:
+#endif
 #ifdef RS6000COFF_C
 	    case C_HIDEXT:
 #if ! defined _AIX52 && ! defined AIX_WEAK_SUPPORT

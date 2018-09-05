@@ -1127,10 +1127,10 @@ static const bfd_target * const _bfd_target_vector[] =
 #endif
 	&m68k_aout_nbsd_vec,
 	&m68k_coff_vec,
-#if 0
+//#if 0
 	&m68k_coff_apollo_vec,
 	&m68k_coff_aux_vec,
-#endif
+//#endif
 	&m68k_coff_sysv_vec,
 	&m68k_coff_un_vec,
 	&m68k_elf32_vec,
