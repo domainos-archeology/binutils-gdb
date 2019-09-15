@@ -41,8 +41,10 @@ reloc_howto_type apollocoff_howto_table[] =
     HOWTO (R_PCRWORD,	       0,  1,	16, TRUE,  0, complain_overflow_signed,	  0, "DISP16",	TRUE, 0x0000ffff,0x0000ffff, FALSE),
     HOWTO (R_PCRLONG,	       0,  2,	32, TRUE,  0, complain_overflow_signed,	  0, "DISP32",	TRUE, 0xffffffff,0xffffffff, FALSE),
     HOWTO (R_RELLONG_NEG,      0,  -2,	32, FALSE, 0, complain_overflow_bitfield, 0, "-32",	TRUE, 0xffffffff,0xffffffff, FALSE),
+    HOWTO (R_DIR32,            0,  2,   32, FALSE, 0, complain_overflow_bitfield, 0, "DIR32",   TRUE, 0xffffffff,0xffffffff, FALSE),
   };
 #endif /* not ONLY_DECLARE_RELOCS */
+
 
 #ifndef BADMAG
 #define BADMAG(x) M68KBADMAG(x)
@@ -67,6 +69,7 @@ apollo_rtype2howto (arelent *internal, int relocentry)
     case R_PCRWORD:	internal->howto = apollocoff_howto_table + 4; break;
     case R_PCRLONG:	internal->howto = apollocoff_howto_table + 5; break;
     case R_RELLONG_NEG:	internal->howto = apollocoff_howto_table + 6; break;
+    case R_DIR32:	internal->howto = apollocoff_howto_table + 7; break;
     }
 }
 
